@@ -17,14 +17,17 @@
         {
             "hostPort": "9200",
             "containerPort": "9200"
+        },
+        {
+            "hostPort": "9300",
+            "containerPort": "9300"
         }
         ],
         "essential": true,
         "mountPoints": [
         {
             "sourceVolume": "elastic-db",
-            "containerPath": "/data",
-            "readOnly": true
+            "containerPath": "/data"
         }
         ]
     }
