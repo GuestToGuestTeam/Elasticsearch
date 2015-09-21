@@ -2,7 +2,7 @@
     "AWSEBDockerrunVersion": 2,
     "volumes": [
     {
-        "name": "elasticsearch",
+        "name": "elastic-db",
         "host": {
             "sourcePath": "/var/app/elastic"
         }
