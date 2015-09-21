@@ -1,0 +1,36 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "volumes": [
+    {
+        "name": "elasticsearch",
+        "host": {
+            "sourcePath": "/var/app/elastic"
+        }
+    }
+    ],
+    "containerDefinitions": [
+    {
+        "name": "gtg-elasticsearch",
+        "image": "guesttoguest/elasticsearch:v1.0.0",
+        "memory": 1024,
+        "portMappings": [
+        {
+            "hostPort": "9200",
+            "containerPort": "9300"
+        },
+        {
+            "hostPort": "9200",
+            "containerPort": "9300"
+        }
+        ],
+        "essential": true,
+        "mountPoints": [
+        {
+            "sourceVolume": "elastic-db",
+            "containerPath": "/data",
+            "readOnly": true
+        }
+        ]
+    }
+    ]
+}
