@@ -19,8 +19,8 @@ RUN apt-get update && apt-get install -y oracle-java8-installer ca-certificates 
 RUN apt-get clean
 
    
-   # rm -rf /var/lib/apt/lists/* && \
-   # rm -rf /var/cache/apt/archives/oracle-jdk8-installer
+# rm -rf /var/lib/apt/lists/* && \
+# rm -rf /var/cache/apt/archives/oracle-jdk8-installer
     
 # Define working directory.
 WORKDIR /data
@@ -54,8 +54,6 @@ WORKDIR /data
 CMD ["/elasticsearch/bin/elasticsearch"]
 
 # Expose ports.
-#   - 9200: HTTP
-#   - 9300: transport
 EXPOSE 9200
 EXPOSE 9300
 
