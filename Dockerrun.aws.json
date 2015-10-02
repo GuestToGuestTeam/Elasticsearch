@@ -11,7 +11,7 @@
     "containerDefinitions": [
     {
         "name": "gtg-elasticsearch",
-        "image": "guesttoguest/elasticsearch:v1.0.0",
+        "image": "guesttoguest/elasticsearch:v1.0.1",
         "memory": 1024,
         "portMappings": [
         {
